@@ -9,7 +9,7 @@ steps:
     timeoutInSeconds: 400
     command: |
       cd src/com/sample/
-      javac HelloWorld.java
+      javac Main.java
     onFailure:
       - type: Command
         command: |
