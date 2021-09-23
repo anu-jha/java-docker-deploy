@@ -11,9 +11,24 @@ files:
   destination: /tmp/genericArtifactDemo
 steps:
   # This section is to define the scripts that each step shall run on the instance after file copy.
-  - stepType: Command
-    name: file 
-    command: ls
+   - stepType: Command
+    name: Install Apache Web Server
+    command: ./install_dependencies.sh
     runAs: root
     timeoutInSeconds: 600
-  
+  - stepType: Command
+    name: Stop Web Server
+    command: ./stop.sh
+    runAs: root
+    timeoutInSeconds: 60
+  - stepType: Command
+    name: Install New Version of Software
+    command: ./install.sh
+    runAs: root
+    timeoutInSeconds: 60
+  - stepType: Command
+    name: Start Web Server
+    command: ./start.sh
+    runAs: root
+    timeoutInSeconds: 60
+
