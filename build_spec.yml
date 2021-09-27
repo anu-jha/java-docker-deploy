@@ -31,6 +31,6 @@ outputArtifacts:
   - name: hello_world_image
     type: DOCKER_IMAGE
     location: hello-world:1.0
- - name: oke
-   type: BINARY
-   location: oke.yaml
+  - name: deploymentSpec
+    type: BINARY
+    location: deployment-spec.yaml
