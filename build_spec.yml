@@ -32,5 +32,5 @@ outputArtifacts:
     type: DOCKER_IMAGE
     location: hello-world:1.0
  - name: bugbashKubeManifest
-    type: BINARY
-    location: oke.yaml
+   type: BINARY
+   location: oke.yaml
