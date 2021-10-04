@@ -5,24 +5,29 @@ env:
   variables:
     version: "v1.0"
 files:
-  # This section is to define how the files in the artifact shall
-# be put on the compute instance
-- source: /
-  destination: /tmp/genericArtifactDemo
+  # This section is to define how the files in the artifact shall 
+  # be put on the compute instance
+  - source: /
+    destination: /tmp/genericArtifactDemo
 steps:
   # This section is to define the scripts that each step shall run on the instance after file copy.
   - stepType: Command
+    name: Install Apache Web Server
+    command: /tmp/genericArtifactDemo/install_dependencies.sh
+    runAs: root
+    timeoutInSeconds: 600
+  - stepType: Command
     name: Stop Web Server
-    command: ./stop.sh
+    command: /tmp/genericArtifactDemo/stop.sh
     runAs: root
     timeoutInSeconds: 60
   - stepType: Command
     name: Install New Version of Software
-    command: ./install.sh
+    command: /tmp/genericArtifactDemo/install.sh
     runAs: root
     timeoutInSeconds: 60
   - stepType: Command
     name: Start Web Server
-    command: ./start.sh
+    command: /tmp/genericArtifactDemo/start.sh
     runAs: root
     timeoutInSeconds: 60
