@@ -16,3 +16,8 @@ steps:
     command: echo "deploy"
     runAs: root
     timeoutInSeconds: 600
+  - stepType: Command
+    name: show files
+    command: ls -la
+    runAs: root
+    timeoutInSeconds: 600  
