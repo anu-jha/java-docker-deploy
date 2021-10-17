@@ -12,7 +12,7 @@ files:
 steps:
   # This section is to define the scripts that each step shall run on the instance after file copy.
   - stepType: Command
-    name: Start Web Server
+    name: deploy OCIR Images
     command: sudo docker pull iad.ocir.io/id204we8d65n/anjhjha_build_repo:latest
     runAs: root
     timeoutInSeconds: 200
