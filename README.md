@@ -125,9 +125,9 @@ Add a **Deliver deploymentspec Artifacts** stage to your Build Pipeline after th
 1. In your Deliver deployment Artifacts stage, choose `Select Artifact`
    
 2. From the list of artifacts select the `deploymentspec_deliver` artifact that you created above
-   <img src="./deliver_deploy_1" />
+   <img src="./deliver_deploy_1.png" />
 3. In the next section, you'll assign the Generic outputArtifact from the `build_spec.yaml` to the DevOps project artifact. For the "Build config/result Artifact name" enter: `deploymentSpec`
-   <img src="./deliver_deploy_2" />
+   <img src="./deliver_deploy_2.png" />
 ### Setting up your Deployment Pipeline
 Create a new Deployment Pipeline to deploy the Instance that we just created.
 ### Instance Deployment Stage
