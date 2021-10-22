@@ -3,9 +3,6 @@ component: build
 timeoutInSeconds: 6000
 runAs: root
 shell: bash
-env:
-  exportvariables:
-    version: "v1.0"
 steps:
   - type: Command
     name: "Build Hello World"
